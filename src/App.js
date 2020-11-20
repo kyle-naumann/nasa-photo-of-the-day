@@ -7,10 +7,11 @@ import Nasaimg from './Components/Nasaimg'
 function App() {
   const [ data, setData ] = useState('')
   const effectFn = () => {
-    axios.get(`${BASE_URL}?api_key=${API_KEY}`)
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=dJzDggM75pbT24RjF0Qf3fYqvjezw1ishFbfpa6p&date=2020-01-01')
     .then((res) => {
       console.log(res.data);
       setData(res.data)
+
     });
   };
 
